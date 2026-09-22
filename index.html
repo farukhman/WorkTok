@@ -6,74 +6,71 @@
   <title>WorkTok - Learn . Connect . Earn</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-16 md:pb-0">
 
   <!-- TOP NAVBAR -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 px-6 py-2.5 flex items-center justify-between">
-    <!-- Logo -->
-    <div class="flex items-center space-x-3 w-64">
-      <div class="bg-blue-600 text-white font-extrabold text-xl w-9 h-9 rounded-lg flex items-center justify-center shadow-sm">W</div>
-      <span class="text-2xl font-black text-[#0066FF] tracking-tight">WorkTok</span>
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 px-4 md:px-6 py-2.5 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <div class="flex items-center space-x-2.5">
+      <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-md relative overflow-hidden">
+        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.5 6.5L8.5 17.5L12 10.5L15.5 17.5L20.5 6.5H17.5L14.5 13.5L12 8.5L9.5 13.5L6.5 6.5H3.5Z"/>
+          <path d="M16 5L20.5 6.5L18 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="text-xl md:text-2xl font-black text-blue-600 tracking-tight">WorkTok</span>
     </div>
 
     <!-- Search Bar -->
-    <div class="w-1/3 relative">
-      <i class="fa-solid fa-magnifying-glass absolute left-4 top-3 text-slate-400 text-sm"></i>
-      <input type="text" placeholder="Search for videos, skills, gigs, posts, people..." class="w-full bg-slate-100/80 text-sm rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-transparent">
+    <div class="flex-1 max-w-md mx-4 hidden sm:block relative">
+      <i class="fa-solid fa-magnifying-glass absolute left-4 top-3 text-slate-400 text-xs"></i>
+      <input type="text" placeholder="Search videos, skills, gigs, posts..." class="w-full bg-slate-100/90 text-xs rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
     </div>
 
-    <!-- User Profile & Action -->
-    <div class="flex items-center space-x-4">
-      <button class="relative p-2 text-slate-500 hover:text-slate-700">
-        <i class="fa-solid fa-bell text-lg"></i>
-        <span class="absolute top-1.5 right-1.5 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+    <!-- User Actions -->
+    <div class="flex items-center space-x-3">
+      <button class="p-2 text-slate-500 hover:text-slate-700 relative">
+        <i class="fa-solid fa-bell text-base"></i>
+        <span class="absolute top-1 right-1 bg-red-500 text-white text-[9px] w-3.5 h-3.5 rounded-full flex items-center justify-center font-bold">2</span>
       </button>
-      <button class="bg-[#0066FF] hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center shadow-sm">
-        <i class="fa-solid fa-plus mr-1.5 text-xs"></i> Create
+      <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3.5 py-1.5 rounded-lg text-xs flex items-center shadow-sm">
+        <i class="fa-solid fa-plus mr-1 text-[10px]"></i> Create
       </button>
-      <div class="w-9 h-9 rounded-full bg-slate-300 border border-slate-200 overflow-hidden cursor-pointer">
-        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Farukh" alt="User Profile" class="w-full h-full object-cover">
+      <div class="w-8 h-8 rounded-full bg-slate-200 border overflow-hidden">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Farukh" alt="User" class="w-full h-full object-cover">
       </div>
     </div>
   </header>
 
-  <div class="flex min-h-[calc(100vh-61px)]">
+  <div class="flex min-h-[calc(100vh-57px)]">
 
-    <!-- LEFT SIDEBAR -->
-    <aside class="w-64 bg-[#0F172A] text-slate-300 p-4 space-y-1 flex-shrink-0">
-      <a href="#" class="flex items-center space-x-3 bg-[#0066FF] text-white px-4 py-3 rounded-xl font-medium text-sm">
-        <i class="fa-solid fa-house w-5 text-center"></i> <span>Home</span>
+    <!-- DESKTOP SIDEBAR -->
+    <aside class="hidden md:block w-60 bg-[#0F172A] text-slate-300 p-4 space-y-1 flex-shrink-0">
+      <a href="#" class="flex items-center space-x-3 bg-blue-600 text-white px-3.5 py-2.5 rounded-xl font-medium text-xs">
+        <i class="fa-solid fa-house w-4"></i> <span>Home</span>
       </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-[#0066FF] fa-circle-play w-5 text-center"></i> <span>Long Videos</span>
+      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-bolt w-4"></i> <span>Shorts</span>
       </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-bolt w-5 text-center"></i> <span>Shorts</span>
+      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-comments w-4"></i> <span>Messages</span>
       </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-comments w-5 text-center"></i> <span>Messages</span>
+      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-user-tie w-4"></i> <span>Mentors / Experts</span>
       </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-user-tie w-5 text-center"></i> <span>Mentor / Experts</span>
+      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-newspaper w-4"></i> <span>Posts</span>
       </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-[#0066FF] fa-newspaper w-5 text-center"></i> <span>Posts</span>
+      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-briefcase w-4"></i> <span>Gigs</span>
       </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-briefcase w-5 text-center"></i> <span>Gigs</span>
+      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-list-check w-4"></i> <span>My Gigs</span>
       </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-list-check w-5 text-center"></i> <span>My Gigs</span>
-      </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-square-plus w-5 text-center"></i> <span>Upload Post</span>
-      </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-[#0066FF] fa-upload w-5 text-center"></i> <span>Upload Gig</span>
-      </a>
-      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-4 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-white">
-        <i class="fa-solid fa-gear w-5 text-center"></i> <span>Settings</span>
+      <a href="#" class="flex items-center space-x-3 hover:bg-slate-800/60 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-gear w-4"></i> <span>Settings</span>
       </a>
 
       <!-- Profile Card Bottom -->
@@ -91,191 +88,145 @@
       </div>
     </aside>
 
-    <!-- CENTER FEED CONTENT AREA -->
-    <main class="flex-1 p-6 space-y-6 overflow-y-auto max-w-[850px]">
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-1 p-3 md:p-6 space-y-4 md:space-y-6 overflow-y-auto max-w-full md:max-w-[850px]">
+      
       <!-- Banner -->
-      <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-900 text-white rounded-2xl p-7 relative overflow-hidden shadow-sm">
+      <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-900 text-white rounded-2xl p-5 md:p-7 relative overflow-hidden shadow-sm">
         <div class="max-w-md space-y-2 relative z-10">
-          <h1 class="text-2xl font-bold tracking-tight">Learn . Connect . Earn</h1>
+          <h1 class="text-xl md:text-2xl font-bold tracking-tight">Learn . Connect . Earn</h1>
           <p class="text-slate-300 text-xs">Your Skills. Your Growth. Your Future.</p>
-          <button class="mt-2 bg-[#0066FF] hover:bg-blue-600 text-white px-5 py-2 rounded-lg text-xs font-semibold shadow">
+          <button class="mt-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded-lg text-xs font-semibold shadow">
             Explore Now &rarr;
           </button>
         </div>
       </div>
 
       <!-- Feed Category Pills -->
-      <div class="flex items-center space-x-2 text-xs font-semibold">
-        <button class="bg-[#0066FF] text-white px-4 py-1.5 rounded-full shadow-sm">
+      <div class="flex items-center space-x-2 text-xs font-semibold overflow-x-auto pb-1">
+        <button class="bg-blue-600 text-white px-4 py-1.5 rounded-full whitespace-nowrap shadow-sm">
           <i class="fa-solid fa-house mr-1"></i> Home
         </button>
-        <button class="bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 px-4 py-1.5 rounded-full">
-          <i class="fa-solid fa-play mr-1"></i> Long Videos
-        </button>
-        <button class="bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 px-4 py-1.5 rounded-full">
-          <i class="fa-solid fa-bolt mr-1"></i> Shorts
-        </button>
-        <button class="bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 px-4 py-1.5 rounded-full">
-          <i class="fa-solid fa-newspaper mr-1"></i> Posts
-        </button>
-        <button class="bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 px-4 py-1.5 rounded-full">
-          <i class="fa-solid fa-briefcase mr-1"></i> Gigs
-        </button>
+        <button class="bg-white text-slate-600 hover:bg-slate-100 border px-4 py-1.5 rounded-full whitespace-nowrap">Shorts</button>
+        <button class="bg-white text-slate-600 hover:bg-slate-100 border px-4 py-1.5 rounded-full whitespace-nowrap">Posts</button>
+        <button class="bg-white text-slate-600 hover:bg-slate-100 border px-4 py-1.5 rounded-full whitespace-nowrap">Gigs</button>
       </div>
 
-      <!-- Recommended Long Videos Grid -->
+      <!-- Recommended Videos Grid -->
       <section>
-        <div class="flex justify-between items-center mb-3">
-          <h2 class="text-sm font-bold text-slate-900">Recommended Long Videos</h2>
-          <a href="#" class="text-xs text-blue-600 font-semibold hover:underline">See All &rarr;</a>
+        <div class="flex justify-between items-center mb-2.5">
+          <h2 class="text-xs md:text-sm font-bold text-slate-900">Recommended Videos</h2>
+          <a href="#" class="text-[11px] text-blue-600 font-semibold">See All &rarr;</a>
         </div>
-        <div class="grid grid-cols-4 gap-3">
-          <!-- Video 1 -->
-          <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm">
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3">
+          <div class="bg-white rounded-xl border overflow-hidden shadow-sm">
             <div class="bg-slate-800 h-24 relative">
               <span class="absolute bottom-1 right-1 bg-black/80 text-white text-[9px] px-1 rounded">12:45</span>
             </div>
             <div class="p-2 space-y-1">
-              <h3 class="font-bold text-xs line-clamp-2 leading-snug">How to Start Freelancing in 2026</h3>
-              <p class="text-[10px] text-slate-500">SkillHub • 125K views</p>
+              <h3 class="font-bold text-[11px] line-clamp-2 leading-snug">How to Start Freelancing in 2026</h3>
+              <p class="text-[9px] text-slate-500">SkillHub • 125K views</p>
             </div>
           </div>
-          <!-- Video 2 -->
-          <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm">
+          <div class="bg-white rounded-xl border overflow-hidden shadow-sm">
             <div class="bg-slate-800 h-24 relative">
               <span class="absolute bottom-1 right-1 bg-black/80 text-white text-[9px] px-1 rounded">15:32</span>
             </div>
             <div class="p-2 space-y-1">
-              <h3 class="font-bold text-xs line-clamp-2 leading-snug">10 Best Websites to Make Money Online</h3>
-              <p class="text-[10px] text-slate-500">Tech World • 243K views</p>
-            </div>
-          </div>
-          <!-- Video 3 -->
-          <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm">
-            <div class="bg-slate-800 h-24 relative">
-              <span class="absolute bottom-1 right-1 bg-black/80 text-white text-[9px] px-1 rounded">22:17</span>
-            </div>
-            <div class="p-2 space-y-1">
-              <h3 class="font-bold text-xs line-clamp-2 leading-snug">Video Editing Full Course for Beginners</h3>
-              <p class="text-[10px] text-slate-500">Creative Mind • 98K views</p>
-            </div>
-          </div>
-          <!-- Video 4 -->
-          <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm">
-            <div class="bg-slate-800 h-24 relative">
-              <span class="absolute bottom-1 right-1 bg-black/80 text-white text-[9px] px-1 rounded">16:08</span>
-            </div>
-            <div class="p-2 space-y-1">
-              <h3 class="font-bold text-xs line-clamp-2 leading-snug">Build Your Personal Brand on Social Media</h3>
-              <p class="text-[10px] text-slate-500">Growth Path • 78K views</p>
+              <h3 class="font-bold text-[11px] line-clamp-2 leading-snug">10 Best Websites to Make Money Online</h3>
+              <p class="text-[9px] text-slate-500">Tech World • 243K views</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Latest Posts & Trending Gigs Split Section -->
-      <div class="grid grid-cols-2 gap-4">
+      <!-- Latest Posts & Trending Gigs -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Latest Posts -->
-        <div class="bg-white rounded-xl border border-slate-200 p-4 space-y-3">
+        <div class="bg-white rounded-xl border p-3.5 space-y-3">
           <div class="flex justify-between items-center">
-            <h2 class="text-sm font-bold text-slate-900">Latest Posts</h2>
-            <a href="#" class="text-xs text-blue-600 font-semibold">See All &rarr;</a>
+            <h2 class="text-xs md:text-sm font-bold text-slate-900">Latest Posts</h2>
+            <a href="#" class="text-[11px] text-blue-600 font-semibold">See All &rarr;</a>
           </div>
-          <div class="border rounded-lg p-3 space-y-2">
+          <div class="border rounded-lg p-2.5 space-y-2">
             <div class="flex items-center space-x-2">
               <div class="w-6 h-6 rounded-full bg-slate-300"></div>
               <div>
-                <p class="text-xs font-bold">CreativeMind</p>
-                <p class="text-[10px] text-slate-400">2 hours ago</p>
+                <p class="text-[11px] font-bold">CreativeMind</p>
+                <p class="text-[9px] text-slate-400">2 hours ago</p>
               </div>
             </div>
-            <p class="text-xs text-slate-600 leading-relaxed">Small steps every day lead to big results. Keep learning, keep growing!</p>
-            <div class="h-28 bg-amber-100 rounded-lg flex items-center justify-center text-amber-800 font-serif font-bold text-sm">
+            <p class="text-xs text-slate-600">Small steps every day lead to big results. Keep learning, keep growing!</p>
+            <div class="h-24 bg-amber-100 rounded-lg flex items-center justify-center text-amber-800 font-serif font-bold text-xs">
               Better Ideas, Bigger Dreams
             </div>
           </div>
         </div>
 
         <!-- Trending Gigs -->
-        <div class="bg-white rounded-xl border border-slate-200 p-4 space-y-3">
+        <div class="bg-white rounded-xl border p-3.5 space-y-3">
           <div class="flex justify-between items-center">
-            <h2 class="text-sm font-bold text-slate-900">Trending Gigs</h2>
-            <a href="#" class="text-xs text-blue-600 font-semibold">See All &rarr;</a>
+            <h2 class="text-xs md:text-sm font-bold text-slate-900">Trending Gigs</h2>
+            <a href="#" class="text-[11px] text-blue-600 font-semibold">See All &rarr;</a>
           </div>
           <div class="space-y-2">
             <div class="flex justify-between items-center border p-2 rounded-lg">
               <div class="text-xs">
-                <p class="font-bold">Logo Design</p>
-                <p class="text-[10px] text-slate-400">Professional Logo Design</p>
+                <p class="font-bold text-[11px]">Logo Design</p>
+                <p class="text-[9px] text-slate-400">Professional Logo Design</p>
               </div>
               <span class="text-xs font-bold text-emerald-600">$15+</span>
             </div>
             <div class="flex justify-between items-center border p-2 rounded-lg">
               <div class="text-xs">
-                <p class="font-bold">Content Writing</p>
-                <p class="text-[10px] text-slate-400">Blog & Article Writing</p>
+                <p class="font-bold text-[11px]">Content Writing</p>
+                <p class="text-[9px] text-slate-400">Blog & Article Writing</p>
               </div>
               <span class="text-xs font-bold text-emerald-600">$10+</span>
             </div>
-            <div class="flex justify-between items-center border p-2 rounded-lg">
-              <div class="text-xs">
-                <p class="font-bold">Video Editing</p>
-                <p class="text-[10px] text-slate-400">Professional Video Editing</p>
-              </div>
-              <span class="text-xs font-bold text-emerald-600">$20+</span>
-            </div>
           </div>
         </div>
       </div>
+
     </main>
 
-    <!-- RIGHT SIDEBAR -->
-    <aside class="w-72 bg-white border-l border-slate-200 p-4 space-y-6 flex-shrink-0">
-      <!-- Turn Skills Into Income Box -->
-      <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 text-xs space-y-2">
-        <h3 class="font-bold text-slate-900 text-sm">Turn Your Skills Into Income</h3>
-        <p class="text-slate-600">Find gigs, get hired and work from anywhere.</p>
-        <button class="bg-[#0066FF] text-white px-3 py-1.5 rounded-lg font-semibold text-xs shadow-sm w-full">
+    <!-- RIGHT SIDEBAR (Desktop Only) -->
+    <aside class="hidden lg:block w-64 bg-white border-l border-slate-200 p-4 space-y-5 flex-shrink-0">
+      <div class="bg-blue-50 border border-blue-100 rounded-xl p-3.5 text-xs space-y-2">
+        <h3 class="font-bold text-slate-900 text-xs">Turn Your Skills Into Income</h3>
+        <p class="text-slate-600 text-[11px]">Find gigs, get hired and work from anywhere.</p>
+        <button class="bg-blue-600 text-white px-3 py-1.5 rounded-lg font-semibold text-xs w-full shadow-sm">
           Explore Gigs &rarr;
         </button>
-      </div>
-
-      <!-- Top Categories Grid -->
-      <div class="space-y-3">
-        <div class="flex justify-between items-center">
-          <h3 class="font-bold text-xs text-slate-900">Top Categories</h3>
-          <a href="#" class="text-[10px] text-blue-600 font-semibold">See All &rarr;</a>
-        </div>
-        <div class="grid grid-cols-3 gap-2 text-center text-[10px]">
-          <div class="p-2 border rounded-lg hover:bg-slate-50"><i class="fa-solid fa-palette text-blue-600 text-sm mb-1 block"></i>Design</div>
-          <div class="p-2 border rounded-lg hover:bg-slate-50"><i class="fa-solid fa-[#0066FF] fa-pen text-blue-600 text-sm mb-1 block"></i>Writing</div>
-          <div class="p-2 border rounded-lg hover:bg-slate-50"><i class="fa-solid fa-video text-blue-600 text-sm mb-1 block"></i>Editing</div>
-        </div>
-      </div>
-
-      <!-- Recommended Mentors -->
-      <div class="space-y-3">
-        <div class="flex justify-between items-center">
-          <h3 class="font-bold text-xs text-slate-900">Recommended Mentors</h3>
-          <a href="#" class="text-[10px] text-blue-600 font-semibold">See All &rarr;</a>
-        </div>
-        <div class="space-y-2 text-xs">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-              <div class="w-7 h-7 rounded-full bg-slate-200"></div>
-              <div>
-                <p class="font-bold text-[11px]">Usman Ali</p>
-                <p class="text-[9px] text-slate-400">Marketing Expert</p>
-              </div>
-            </div>
-            <button class="border border-blue-600 text-blue-600 px-2 py-0.5 rounded text-[10px] hover:bg-blue-50">Message</button>
-          </div>
-        </div>
       </div>
     </aside>
 
   </div>
 
+  <!-- MOBILE BOTTOM NAVIGATION BAR -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 py-2 px-4 flex justify-between items-center z-50 text-slate-600 text-[10px]">
+    <a href="#" class="flex flex-col items-center text-blue-600 font-bold">
+      <i class="fa-solid fa-house text-base"></i>
+      <span>Home</span>
+    </a>
+    <a href="#" class="flex flex-col items-center hover:text-blue-600">
+      <i class="fa-solid fa-bolt text-base"></i>
+      <span>Shorts</span>
+    </a>
+    <a href="#" class="flex flex-col items-center hover:text-blue-600">
+      <i class="fa-solid fa-comments text-base"></i>
+      <span>Connect</span>
+    </a>
+    <a href="#" class="flex flex-col items-center hover:text-blue-600">
+      <i class="fa-solid fa-briefcase text-base"></i>
+      <span>Gigs</span>
+    </a>
+    <a href="#" class="flex flex-col items-center hover:text-blue-600">
+      <i class="fa-solid fa-user text-base"></i>
+      <span>You</span>
+    </a>
+  </nav>
+
 </body>
-          </html>
+  </html>
         
