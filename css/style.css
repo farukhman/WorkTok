@@ -1,0 +1,30 @@
+/* WorkTok Custom Layout & Video Styling */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Video Thumbnail Aspect Ratio */
+.video-card-img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Short Video Vertical Aspect Ratio */
+.short-card-img {
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
